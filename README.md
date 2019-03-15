@@ -48,7 +48,7 @@ const store = createStore(
 ```
 Now you can execute code in your components based on dispatched redux actions
 
-#### API
+### API
 
 #### ``subscribe(event, callback)`` 
 
@@ -60,7 +60,7 @@ Now you can execute code in your components based on dispatched redux actions
 * shorthand version of ``subscribe()``
 
 #### ``unsubscribe(key)``
-* ``key`` (string) the subscription key returned from ``subscribe``
+* ``key`` (string|array) subscription key (or array of keys) returned from ``subscribe``
 
 #### `unsub(key)`
 * shorthand version of `unsubscribe()`
@@ -73,7 +73,7 @@ Now you can execute code in your components based on dispatched redux actions
 * clears all subscribers
 
 
-#### Wildcards
+### Wildcards
 3 different wildcards levels are supported
 
 #### `login*`
