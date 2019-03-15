@@ -1,0 +1,13 @@
+# OSX
+#
+.DS_Store
+
+# MISC
+.idea/
+
+
+# node.js
+#
+node_modules/
+yarn-error.log
+npm-debug.log
