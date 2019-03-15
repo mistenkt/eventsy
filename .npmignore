@@ -1,0 +1,20 @@
+# OSX
+#
+.DS_Store
+
+# MISC
+#
+.idea/
+
+# Tests
+#
+tests
+jest.config.js
+babel.config.js
+
+
+# node.js
+#
+node_modules/
+yarn-error.log
+npm-debug.log

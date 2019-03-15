@@ -1,11 +1,15 @@
 {
   "name": "eventsy",
-  "version": "1.0.1",
-  "description": "JS Event system",
+  "version": "1.0.3",
+  "description": "JS Event system that can hook on to Redux actions",
   "main": "index.js",
   "repository": "git@github.com:mistenkt/eventsy.git",
   "author": "mistenkt <betezett@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "events",
+    "redux"
+  ],
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
