@@ -1,6 +1,6 @@
 {
   "name": "eventsy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JS Event system that can hook on to Redux actions",
   "main": "index.js",
   "repository": "git@github.com:mistenkt/eventsy.git",

@@ -147,7 +147,7 @@ class Event {
 const EventSystem = new Event();
 
 export const eventSystemReduxMiddleware = store => next => action => {
-    this.publish(action.type, action.payload);
+    EventSystem.publish(action.type, action.payload);
     return next(action);
 };
 
