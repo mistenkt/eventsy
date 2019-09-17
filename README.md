@@ -7,7 +7,26 @@ JS Event System with redux integration
 yarn add eventsy
 ```
 
-#### Basic Usage
+#### Basic Usage (with hooks)
+````javascript
+import React from 'react';
+import {useListener} from 'eventsy';
+
+const foo = () => {
+    
+    useListener('foo/bar', data => {
+        // react to 'foo/bar' action
+    });
+    
+    return (
+        <div></div>
+    )
+}
+
+export default foo;
+````
+
+#### Basic Usage (with classes)
 
 ```javascript
 ...
