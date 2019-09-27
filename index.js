@@ -144,11 +144,20 @@ class Event {
 
 }
 
-const EventSystem = new Event();
+const Eventsy = new Event();
+
+export const useListener = (listener, callback, updateOn = []) => {
+    const React = require('react');
+    return React.useEffect(() => {
+        const subscribedListener = Eventsy.sub(listener, callback);
+        return () => Eventsy.unsubscribe(subscribedListener);
+    }, updateOn);
+
+};
 
 export const eventSystemReduxMiddleware = store => next => action => {
-    EventSystem.publish(action.type, action.payload);
+    Eventsy.publish(action.type, action.payload);
     return next(action);
 };
 
-export default EventSystem;
+export default Eventsy;
