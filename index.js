@@ -52,7 +52,7 @@ class Event {
      * @returns {*}
      */
     subscribe(event, callback) {
-        if(typeof event === 'object') {
+        if(Array.isArray(event)) {
             let eventIds = [];
             event.forEach(item => {
                 eventIds.push(this._subscribeSingle(item, callback));
@@ -69,7 +69,7 @@ class Event {
      * @param event
      */
     unsubscribe(event) {
-        if(typeof event === 'object') {
+        if(Array.isArray(event)) {
             event.forEach(eventId => this._unsubscribeSingle(eventId))
         } else {
             this._unsubscribeSingle(event);

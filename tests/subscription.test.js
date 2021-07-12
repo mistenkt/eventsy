@@ -31,6 +31,31 @@ describe('Subscription functionality', () => {
     });
 });
 
+describe('Testing array of subscription events', () => {
+    test('Should return an array of ids matching the count of subscribed events', () => {
+        const subIds = Event.sub(['foo/bar', 'bar/foo'], () => null);
+
+        expect(subIds).toHaveLength(2);
+    });
+
+    test('both events should trigger the same callback', () => {
+        const fn = jest.fn();
+        Event.sub(['foo/bar', 'bar/foo'], fn);
+
+        Event.publish('foo/bar');
+
+        expect(fn).toHaveBeenCalledTimes(1);
+
+        Event.publish('bar/foo');
+
+        expect(fn).toHaveBeenCalledTimes(2);
+
+        Event.publish('bar/baz');
+
+        expect(fn).toHaveBeenCalledTimes(2);
+    });
+});
+
 describe('Subscription works with wildcards', () => {
     test('wildcards work', () => {
         Event.clearAll();
