@@ -16,7 +16,7 @@ const foo = () => {
     
     useListener('foo/bar', data => {
         // react to 'foo/bar' action
-    });
+    }, [/* anyValuesItShouldUpdateOn*/]);
     
     return (
         <div></div>
